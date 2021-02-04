@@ -1,0 +1,30 @@
+.loading {
+  background-color: $lime;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  opacity: 0;
+}
+
+.loading__transition-enter {
+  transform: translate(100%, 0);
+  opacity: 1;
+}
+
+.loading__transition-enter-active,
+.loading__transition-exit {
+  transform: translate(0, 0);
+  transition: transform 500ms;
+  opacity: 1;
+}
+
+.loading__transition-exit-active {
+  transform: translate(-100%, 0);
+}
+
+.loading__transition-exit-done {
+  opacity: 0;
+}

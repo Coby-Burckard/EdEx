@@ -5,6 +5,8 @@ const Home = (props) => {
   return (
     <>
       <Loading />
+      <p>hello</p>
+      <p>hi there</p>
     </>
   )
 }
