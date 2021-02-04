@@ -1,6 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap");
+
 //colors
 $background: #131820;
 $lime: #48be8e;
 $teal: #229eac;
 $gradient: linear-gradient(94deg, #48be8e, #229eac);
 $white: #ffffff;
+
+//fonts
+$base-font: "Open Sans", sans-serif;
+$title-font: "Titillium Web", sans-serif;
+
+//font-size
+$medium-font: 20px;
+$large-font: 28px;
+$xl-font: 36px;
+$xxl-font: 44px;
+
+//timing
+$xs-time: 100ms;
+$s-time: 250ms;
+$medium-time: 500ms;
+$ml-time: 750ms;
+$l-time: 1000ms;
+$xxl-time: 2000ms;

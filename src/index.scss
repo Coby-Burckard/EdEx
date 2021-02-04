@@ -1,5 +1,9 @@
 @import "./styles/variables";
 @import "./styles/app";
 
+//reusable classes
+@import "./styles/reusable/animations.scss";
+
 //components
 @import "./styles/components/loading";
+@import "./styles/components/home";

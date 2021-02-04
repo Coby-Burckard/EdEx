@@ -1,0 +1,75 @@
+//animations
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.opaque {
+  opacity: 0;
+}
+
+.fadeInDelayed {
+  animation: fadeIn $medium-time linear;
+  animation-delay: $l-time;
+  animation-fill-mode: forwards;
+  -webkit-animation: fadeIn $medium-time linear;
+  -webkit-animation-delay: $l-time;
+  -webkit-animation-fill-mode: forwards;
+}
+
+//animations
+@keyframes fadeOutZ {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(200%, -300%) scale(1.5);
+  }
+}
+
+@-webkit-keyframes fadeOutZ {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1.5;
+    transform: translate(200px, 500px);
+  }
+}
+
+.opaque {
+  opacity: 0;
+}
+
+.fadeOutZOne {
+  animation: fadeOutZ $xxl-time ease-in infinite;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  -webkit-animation: fadeOutZ $xxl-time linear infinite;
+  -webkit-animation-delay: 0ms;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fadeOutZTwo {
+  animation: fadeOutZ $xxl-time ease-in infinite;
+  animation-delay: -$l-time;
+  animation-fill-mode: forwards;
+  -webkit-animation: fadeOutZ $xxl-time linear infinite;
+  -webkit-animation-delay: -$l-time;
+  -webkit-animation-fill-mode: forwards;
+}
