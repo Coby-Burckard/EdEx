@@ -73,3 +73,10 @@
   -webkit-animation-delay: -$l-time;
   -webkit-animation-fill-mode: forwards;
 }
+
+.mobile-width {
+  @media (max-width: $mobile-breakpoint) {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}

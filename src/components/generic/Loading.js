@@ -29,7 +29,7 @@ const Loading = () => {
         classNames="loading__transition"
       >
         <div className="loading">
-          <div className="loading__content">
+          <div className="loading__content mobile-width">
             <div className="loading__img-container">
               <img src={heroku} alt="heroku logo" />
               <div className="loading__z fadeOutZOne">Z</div>
