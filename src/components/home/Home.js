@@ -6,7 +6,6 @@ const Home = (props) => {
     <>
       <Loading />
       <p className="home opaque fadeInDelayed">hello</p>
-      <p>hi there</p>
     </>
   )
 }
