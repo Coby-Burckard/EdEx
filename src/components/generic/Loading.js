@@ -1,22 +1,30 @@
 import React, { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import useInterval from "use-interval"
 import { CSSTransition } from "react-transition-group"
-import { checkIfLoading } from "../../helpers/requests/loading"
 import heroku from "../images/heroku.svg"
+import { wakeUp } from "../../store/actions/wakeUpActions"
 
 const Loading = () => {
+  const dispatch = useDispatch()
+  const awake = useSelector((state) => state.awake.awake)
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
-    setIsLoading(true)
+    if (!awake) {
+      setIsLoading(true)
+    }
   }, [])
 
   useInterval(
     async () => {
-      const loadRes = await checkIfLoading()
-      setIsLoading(loadRes)
+      if (awake) {
+        setIsLoading(false)
+      } else {
+        dispatch(wakeUp())
+      }
     },
-    4000,
+    3000,
     false
   )
 
