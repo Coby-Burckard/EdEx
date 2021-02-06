@@ -4,18 +4,27 @@ import request from "./requests/request"
 const signUp = createAsyncThunk(
   "signUp",
   async (credentials, { rejectWithValue }) => {
+    const errorMessage = "Unable to sign up"
+
+    //requesting sign up
     const response = await request("teachers", {
       method: "POST",
       body: JSON.stringify(credentials),
     })
 
-    //error checking
-    console.log(response.status, response.jwt, response)
-    if (typeof response.jwt !== "string") {
-      return rejectWithValue("unable to sign up")
+    //checking status
+    if (response.status !== 201) {
+      return rejectWithValue(errorMessage)
     }
 
-    return response
+    const body = await response.json()
+
+    //checking body
+    if (typeof body.jwt !== "string") {
+      return rejectWithValue(errorMessage)
+    }
+
+    return body
   }
 )
 

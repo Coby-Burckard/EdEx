@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(
       signUp({
-        email: "nasdf@coby.com",
+        email: "nf@coby.com",
         password: "123abc",
       })
     )

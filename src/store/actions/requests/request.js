@@ -11,7 +11,7 @@ const request = async (endpoint, options) => {
       },
     })
 
-    return await response.json()
+    return response
   } catch {
     throw new Error("unable to login")
   }
