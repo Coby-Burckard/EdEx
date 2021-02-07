@@ -1,0 +1,10 @@
+nav {
+  background-color: $background-alt;
+  box-shadow: -2px 2px 1vh 0.5vh black;
+  width: 100%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

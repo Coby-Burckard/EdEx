@@ -28,4 +28,31 @@ const signUp = createAsyncThunk(
   }
 )
 
-export { signUp }
+const login = createAsyncThunk(
+  "login",
+  async (credentials, { rejectWithValue }) => {
+    const errorMessage = "Unable to login"
+
+    //requesting sign up
+    const response = await request("teachers/login", {
+      method: "POST",
+      body: JSON.stringify(credentials),
+    })
+
+    //checking status
+    if (response.status !== 200) {
+      return rejectWithValue(errorMessage)
+    }
+
+    const body = await response.json()
+
+    //checking body
+    if (typeof body.jwt !== "string") {
+      return rejectWithValue(errorMessage)
+    }
+
+    return body
+  }
+)
+
+export { signUp, login }

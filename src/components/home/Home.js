@@ -1,24 +1,13 @@
-import React, { useEffect, useState } from "react"
-import { useDispatch } from "react-redux"
+import React from "react"
 import Loading from "../generic/Loading"
+import Nav from "../generic/Nav"
 import HomeContent from "./HomeContent"
-import { signUp } from "../../store/actions/teacherActions"
 
 const Home = () => {
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(
-      signUp({
-        email: "nf@coby.com",
-        password: "123abc",
-      })
-    )
-  }, [])
-
   return (
     <>
       <Loading />
+      <Nav />
       <HomeContent />
     </>
   )

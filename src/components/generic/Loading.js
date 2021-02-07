@@ -14,7 +14,7 @@ const Loading = () => {
     if (!awake) {
       setIsLoading(true)
     }
-  }, [])
+  }, [awake, setIsLoading])
 
   useInterval(
     async () => {
@@ -24,7 +24,7 @@ const Loading = () => {
         dispatch(wakeUp())
       }
     },
-    3000,
+    2000,
     false
   )
 

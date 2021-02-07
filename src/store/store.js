@@ -1,8 +1,6 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit"
+import { configureStore } from "@reduxjs/toolkit"
 import teacherSlice from "./slices/teacherSlice"
 import awakeSlice from "./slices/awakeSlice"
-
-const preLoadedState = {}
 
 const reducer = {
   teacher: teacherSlice,
